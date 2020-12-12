@@ -5,6 +5,8 @@ import { TranslateModule, TranslateLoader } from '@ngx-translate/core';
 import { FormsModule } from '@angular/forms';
 import { HttpClient } from '@angular/common/http';
 import { TranslateHttpLoader } from '@ngx-translate/http-loader';
+import { NgSearchFilterModule } from 'ng-search-filter';
+import { NgxPaginationModule } from 'ngx-pagination';
 import { MatModule } from '../../utils';
 import {
   AdminSidebarComponent,
@@ -14,7 +16,7 @@ import {
   AdminLayoutComponent,
   DialogWindowComponent,
 } from '../../components/';
-import { DashboardComponent, LoginComponent } from './';
+import { DashboardComponent, LoginComponent, UserListComponent } from './';
 
 export function HttpLoaderFactory(http: HttpClient) {
   return new TranslateHttpLoader(http);
@@ -30,10 +32,13 @@ export function HttpLoaderFactory(http: HttpClient) {
     AdminSidebarComponent,
     LoginComponent,
     DialogWindowComponent,
+    UserListComponent,
   ],
   imports: [
     CommonModule,
     MatModule,
+    NgSearchFilterModule,
+    NgxPaginationModule,
     RouterModule,
     FormsModule,
     TranslateModule.forRoot({
@@ -46,4 +51,4 @@ export function HttpLoaderFactory(http: HttpClient) {
   ],
   providers: [],
 })
-export class AdminLayoutModule {}
+export class AdminLayoutModule { }
