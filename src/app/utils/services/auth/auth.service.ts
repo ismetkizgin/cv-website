@@ -28,6 +28,15 @@ export class AuthService {
     return this.currentUserSubject.value;
   }
 
+  async updateProfile(values) {
+    return await this._apiFetchService.requestAsync(
+      'PUT',
+      'my-account',
+      values,
+      true
+    );
+  }
+
   async login(user) {
     try {
       const respone: any = await this._apiFetchService.requestAsync(

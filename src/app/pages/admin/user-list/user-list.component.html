@@ -1,4 +1,7 @@
 <div class="row">
+    <div class="col-md-4 col-sm-12 add-button">
+        <button type="button" (click)="openAddUserModal()" class="btn btn-sm btn-outline-success"><i class="fas fa-plus"></i> {{ 'Add User' | translate }}</button>
+    </div>
     <div class="col-md-3 col-sm-12 ml-auto">
         <mat-form-field>
             <mat-label>{{ 'Search' | translate }}</mat-label>
@@ -30,7 +33,7 @@
                             <mat-icon class="list-menu">more_vert</mat-icon>
                         </a>
                         <mat-menu #menu="matMenu">
-                            <a mat-menu-item [routerLink]="['/admin/user/edit/',user.UserID]">
+                            <a mat-menu-item (click)="openAddUserModal(user.id)">
                                 <mat-icon>edit</mat-icon>
                                 <span>{{ 'Edit' | translate }}</span>
                             </a>

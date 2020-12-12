@@ -15,6 +15,7 @@ import {
   AdminFooterComponent,
   AdminLayoutComponent,
   DialogWindowComponent,
+  AddUserComponent
 } from '../../components/';
 import { DashboardComponent, LoginComponent, UserListComponent } from './';
 
@@ -31,6 +32,7 @@ export function HttpLoaderFactory(http: HttpClient) {
     AdminControlSidebarComponent,
     AdminSidebarComponent,
     LoginComponent,
+    AddUserComponent,
     DialogWindowComponent,
     UserListComponent,
   ],
