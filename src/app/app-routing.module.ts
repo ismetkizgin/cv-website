@@ -1,5 +1,5 @@
 import { NgModule } from '@angular/core';
-import { Routes, RouterModule, ChildActivationEnd } from '@angular/router';
+import { Routes, RouterModule } from '@angular/router';
 import {
   ClientLayoutComponent,
   AdminLayoutComponent,
@@ -19,7 +19,11 @@ const routes: Routes = [
     canActivate: [AuthGuard],
     canActivateChild: [AuthGuard],
     children: [
-      { path: '', component: DashboardComponent, data: { title: 'Dashboard', icon: 'fa fa-2x fa-home' } },
+      {
+        path: '',
+        component: DashboardComponent,
+        data: { title: 'Dashboard', icon: 'fa fa-2x fa-home' },
+      },
     ],
   },
   {

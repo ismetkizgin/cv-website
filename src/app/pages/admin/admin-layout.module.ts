@@ -5,15 +5,16 @@ import { TranslateModule, TranslateLoader } from '@ngx-translate/core';
 import { FormsModule } from '@angular/forms';
 import { HttpClient } from '@angular/common/http';
 import { TranslateHttpLoader } from '@ngx-translate/http-loader';
+import { MatModule } from '../../utils';
 import {
   AdminSidebarComponent,
   AdminControlSidebarComponent,
   AdminHeaderComponent,
   AdminFooterComponent,
   AdminLayoutComponent,
-} from '../../components/layouts/admin/';
-import { DashboardComponent } from './';
-import { LoginComponent } from './login/login.component';
+  DialogWindowComponent,
+} from '../../components/';
+import { DashboardComponent, LoginComponent } from './';
 
 export function HttpLoaderFactory(http: HttpClient) {
   return new TranslateHttpLoader(http);
@@ -27,10 +28,12 @@ export function HttpLoaderFactory(http: HttpClient) {
     AdminHeaderComponent,
     AdminControlSidebarComponent,
     AdminSidebarComponent,
-    LoginComponent
+    LoginComponent,
+    DialogWindowComponent,
   ],
   imports: [
     CommonModule,
+    MatModule,
     RouterModule,
     FormsModule,
     TranslateModule.forRoot({

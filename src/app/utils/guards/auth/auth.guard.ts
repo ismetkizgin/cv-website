@@ -37,16 +37,7 @@ export class AuthGuard implements CanActivate, CanActivateChild {
     state: RouterStateSnapshot
   ) {
     const response: any = await this._authenticationService.tokenDecode();
-    if (response) {
-      if (
-        next.data.authorize &&
-        next.data.authorize.indexOf(response.UserStatusName) === -1
-      ) {
-        this._router.navigate(['/admin']);
-        return false;
-      }
-      return true;
-    }
+    if (response) return true;
 
     // not logged in so redirect to login page with the return url
     this._router.navigate(['/login'], {
