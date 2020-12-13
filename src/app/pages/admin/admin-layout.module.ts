@@ -20,7 +20,8 @@ import {
   DialogWindowComponent,
   AddUserComponent,
   AddProjectComponent,
-  AddWorkExperienceComponent, 
+  AddWorkExperienceComponent,
+  AddMemberShipsComponent,
   AddHobbyComponent,
   AddGrammarComponent,
 } from '../../components/';
@@ -31,6 +32,7 @@ import {
   UserListComponent,
   ProjectListComponent,
   WorkExperienceComponent,
+  MemberShipsListComponent,
   HobbyListComponent,
   GrammarListComponent,
   EventsComponent
@@ -59,6 +61,8 @@ export function HttpLoaderFactory(http: HttpClient) {
     UserListComponent,
     ProjectListComponent,
     WorkExperienceComponent,
+    MemberShipsListComponent,
+    AddMemberShipsComponent,
     HobbyListComponent,
     AddHobbyComponent,
     PersonalInformationComponent,
