@@ -1,0 +1,33 @@
+<div ma-dialog-title class="institution-dialog__header">
+    <div class="modal-header">
+        <h2>{{ 'Add Event' | translate}}</h2>
+        <a [mat-dialog-close]="false" class="close-icon">
+            <mat-icon>close</mat-icon>
+        </a>
+    </div>
+</div>
+
+<mat-dialog-content class="mat-typography institution-dialog__content">
+    <form #eventForm='ngForm' (ngSubmit)="onSave(eventForm)">
+        <div class="form-group mt-2">
+            <mat-form-field appearance="outline" class="w-100">
+                <mat-label>{{ 'Event Name' | translate }}</mat-label>
+                <input matInput type="text" placeholder="{{ 'Enter Language Name' | translate }}"
+                    pattern="^[A-Za-zÇçÖöŞşÜüĞğİı ]+$" name="EventName" #EventName="ngModel"
+                    [(ngModel)]="event.EventName" required>
+                <mat-error *ngIf="EventName.invalid&&EventName.touched">
+                    {{ 'Event Name field must be filled' | translate }}</mat-error>
+            </mat-form-field>
+        </div>
+        <div class="form-group">
+            <mat-form-field appearance="outline" class="w-100">
+                <mat-label>{{ 'Event Status' | translate }}</mat-label>
+                <input matInput type="text" placeholder="{{ 'Enter Event Status' | translate }}" name="EventStatus"
+                    #EventStatus="ngModel" [(ngModel)]="event.EventStatus" required>
+                <mat-error *ngIf="EventStatus.invalid&&EventStatus.touched">
+                    {{ 'Event Status field must be filled' | translate }}</mat-error>
+            </mat-form-field>
+        </div>
+        <button type="submit" class="btn btn-info w-100">{{'Save'| translate}}</button>
+    </form>
+</mat-dialog-content>
