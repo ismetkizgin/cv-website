@@ -44,7 +44,7 @@ const routes: Routes = [
       {
         path: 'works',
         component: WorkExperienceComponent,
-        data: { title: 'work Experience List', icon: 'fa fa-2x fa-home' },
+        data: { title: 'Work Experience List', icon: 'fa fa-2x fa-home' },
       },
     ],
   },

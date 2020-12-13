@@ -6,6 +6,8 @@ import { FormsModule } from '@angular/forms';
 import { HttpClient } from '@angular/common/http';
 import { TranslateHttpLoader } from '@ngx-translate/http-loader';
 import { NgSearchFilterModule } from 'ng-search-filter';
+import { MatDatepickerModule } from '@angular/material/datepicker';
+import { MatNativeDateModule } from '@angular/material/core';
 import { NgxPaginationModule } from 'ngx-pagination';
 import { MatModule } from '../../utils';
 import {
@@ -16,15 +18,16 @@ import {
   AdminLayoutComponent,
   DialogWindowComponent,
   AddUserComponent,
-  AddProjectComponent
+  AddProjectComponent,
+  AddWorkExperienceComponent
 } from '../../components/';
-import { 
-  DashboardComponent, 
-  LoginComponent, 
-  UserListComponent, 
+import {
+  DashboardComponent,
+  LoginComponent,
+  UserListComponent,
   ProjectListComponent,
   WorkExperienceComponent
- } from './';
+} from './';
 
 export function HttpLoaderFactory(http: HttpClient) {
   return new TranslateHttpLoader(http);
@@ -41,6 +44,7 @@ export function HttpLoaderFactory(http: HttpClient) {
     AddProjectComponent,
     LoginComponent,
     AddUserComponent,
+    AddWorkExperienceComponent,
     DialogWindowComponent,
     UserListComponent,
     ProjectListComponent,
@@ -51,6 +55,8 @@ export function HttpLoaderFactory(http: HttpClient) {
     MatModule,
     NgSearchFilterModule,
     NgxPaginationModule,
+    MatNativeDateModule,
+    MatDatepickerModule,
     RouterModule,
     FormsModule,
     TranslateModule.forRoot({

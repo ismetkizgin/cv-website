@@ -1,0 +1,57 @@
+<div ma-dialog-title class="institution-dialog__header">
+    <div class="modal-header">
+        <h2>{{ 'Add Work Experience' | translate}}</h2>
+        <a [mat-dialog-close]="false" class="close-icon">
+            <mat-icon>close</mat-icon>
+        </a>
+    </div>
+</div>
+
+<mat-dialog-content class="mat-typography institution-dialog__content">
+    <form #workForm='ngForm' (ngSubmit)="onSave(workForm)">
+        <div class="form-group mt-2">
+            <mat-form-field appearance="outline" class="w-100">
+                <mat-label>{{ 'Company Name' | translate }}</mat-label>
+                <input matInput type="text" placeholder="{{ 'Enter Company Name' | translate }}"
+                    pattern="^[A-Za-zÇçÖöŞşÜüĞğİı ]+$" name="CompanyName" #CompanyName="ngModel"
+                    [(ngModel)]="work.CompanyName" required>
+                <mat-error *ngIf="CompanyName.invalid&&CompanyName.touched">
+                    {{ 'Company Name field must be filled' | translate }}</mat-error>
+            </mat-form-field>
+        </div>
+        <div class="form-group">
+            <mat-form-field appearance="outline" class="w-100">
+                <mat-label>{{ 'Title' | translate }}</mat-label>
+                <input matInput type="text" placeholder="{{ 'Enter Title' | translate }}" name="Title" #Title="ngModel"
+                    [(ngModel)]="work.Title" required>
+                <mat-error *ngIf="Title.invalid&&Title.touched">
+                    {{ 'Title field must be filled' | translate }}</mat-error>
+            </mat-form-field>
+        </div>
+        
+        <div class="form-group">
+            <mat-form-field appearance="outline">
+                <mat-label>{{ 'Start Date Of Work' | translate }}</mat-label>
+                <input matInput [matDatepicker]="StartDateOfWork" name="StartDateOfWork"
+                    #StartDateOfWork="ngModel" [(ngModel)]="work.StartDateOfWork" required>
+                <mat-datepicker-toggle matSuffix [for]="StartDateOfWork"></mat-datepicker-toggle>
+                <mat-datepicker #StartDateOfWork></mat-datepicker>
+                <mat-error *ngIf="StartDateOfWork.invalid&&StartDateOfWork.touched">
+                    {{ 'Fill in the Start Date Of Work field' | translate }}</mat-error>
+            </mat-form-field>
+        </div>
+
+        <div class="form-group">
+            <mat-form-field appearance="outline">
+                <mat-label>{{ 'Dismissal Date' | translate }}</mat-label>
+                <input matInput [matDatepicker]="DismissalDate" name="DismissalDate"
+                    #DismissalDate="ngModel" [(ngModel)]="work.DismissalDate" required>
+                <mat-datepicker-toggle matSuffix [for]="DismissalDate"></mat-datepicker-toggle>
+                <mat-datepicker #DismissalDate></mat-datepicker>
+                <mat-error *ngIf="DismissalDate.invalid&&DismissalDate.touched">
+                    {{ 'Fill in the Dismissal Date field' | translate }}</mat-error>
+            </mat-form-field>
+        </div>
+        <button type="submit" class="btn btn-info w-100">{{'Save'| translate}}</button>
+    </form>
+</mat-dialog-content>
