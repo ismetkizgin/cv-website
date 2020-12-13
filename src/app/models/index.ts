@@ -4,3 +4,4 @@ export * from './project';
 export * from './work-experience';
 export * from './personal';
 export * from './grammar';
+export * from './event';
