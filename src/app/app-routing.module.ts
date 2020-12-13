@@ -10,7 +10,8 @@ import {
   LoginComponent, 
   UserListComponent,
   ProjectListComponent,
-  WorkExperienceComponent
+  WorkExperienceComponent,
+  HobbyListComponent
 } from './pages';
 import { AuthGuard } from './utils/guards';
 
@@ -45,6 +46,11 @@ const routes: Routes = [
         path: 'works',
         component: WorkExperienceComponent,
         data: { title: 'Work Experience List', icon: 'fa fa-2x fa-home' },
+      },
+      {
+        path: 'hobbies',
+        component: HobbyListComponent,
+        data: { title: 'Hobby List', icon: 'fa fa-2x fa-home' },
       },
     ],
   },

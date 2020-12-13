@@ -19,15 +19,18 @@ import {
   DialogWindowComponent,
   AddUserComponent,
   AddProjectComponent,
-  AddWorkExperienceComponent
+  AddWorkExperienceComponent, 
+  AddHobbyComponent,
 } from '../../components/';
 import {
   DashboardComponent,
   LoginComponent,
   UserListComponent,
   ProjectListComponent,
-  WorkExperienceComponent
+  WorkExperienceComponent,
+  HobbyListComponent,
 } from './';
+
 
 export function HttpLoaderFactory(http: HttpClient) {
   return new TranslateHttpLoader(http);
@@ -49,6 +52,8 @@ export function HttpLoaderFactory(http: HttpClient) {
     UserListComponent,
     ProjectListComponent,
     WorkExperienceComponent,
+    HobbyListComponent,
+    AddHobbyComponent,
   ],
   imports: [
     CommonModule,
