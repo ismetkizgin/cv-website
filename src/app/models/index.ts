@@ -2,6 +2,7 @@ export * from './roles';
 export * from './user';
 export * from './project';
 export * from './work-experience';
+export * from './reference';
 export * from './member-ships';
 export * from './hobby';
 export * from './personal';

@@ -4,6 +4,7 @@ export * from './admin-sidebar-item/admin-sidebar-item.service';
 export * from './user/user.service';
 export * from './project/project.service';
 export * from './work-experience/work-experience.service';
+export * from './reference/reference.service';
 export * from './member-ships/member-ships.service';
 export * from './hobby/hobby.service';
 export * from './personal-information/personal-information.service';
