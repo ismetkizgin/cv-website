@@ -10,6 +10,7 @@ import { TranslateHttpLoader } from '@ngx-translate/http-loader';
 import { AdminLayoutModule } from './pages/admin/admin-layout.module';
 import { ClientLayoutModule } from './pages/client/client-layout.module';
 
+
 export function HttpLoaderFactory(http: HttpClient) {
   return new TranslateHttpLoader(http);
 }
@@ -17,7 +18,9 @@ export function HttpLoaderFactory(http: HttpClient) {
 @NgModule({
   declarations: [
     AppComponent,
-    routingComponents
+    routingComponents,
+ 
+
   ],
   imports: [
     BrowserModule,
