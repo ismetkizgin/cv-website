@@ -13,6 +13,7 @@ import { MatModule } from '../../utils';
 import {
   AdminSidebarComponent,
   AdminControlSidebarComponent,
+  UpdatePersonalComponent,
   AdminHeaderComponent,
   AdminFooterComponent,
   AdminLayoutComponent,
@@ -21,14 +22,18 @@ import {
   AddProjectComponent,
   AddWorkExperienceComponent, 
   AddHobbyComponent,
+  AddGrammarComponent,
 } from '../../components/';
 import {
   DashboardComponent,
+  PersonalInformationComponent,
   LoginComponent,
   UserListComponent,
   ProjectListComponent,
   WorkExperienceComponent,
   HobbyListComponent,
+  GrammarListComponent,
+  EventsComponent
 } from './';
 
 
@@ -44,8 +49,10 @@ export function HttpLoaderFactory(http: HttpClient) {
     AdminHeaderComponent,
     AdminControlSidebarComponent,
     AdminSidebarComponent,
+    AddGrammarComponent,
     AddProjectComponent,
     LoginComponent,
+    UpdatePersonalComponent,
     AddUserComponent,
     AddWorkExperienceComponent,
     DialogWindowComponent,
@@ -54,6 +61,9 @@ export function HttpLoaderFactory(http: HttpClient) {
     WorkExperienceComponent,
     HobbyListComponent,
     AddHobbyComponent,
+    PersonalInformationComponent,
+    GrammarListComponent,
+    EventsComponent,
   ],
   imports: [
     CommonModule,
