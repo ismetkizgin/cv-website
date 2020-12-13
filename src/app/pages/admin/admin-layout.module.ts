@@ -21,6 +21,7 @@ import {
   AddProjectComponent,
   AddWorkExperienceComponent, 
   AddHobbyComponent,
+  AddCompetencyComponent
 } from '../../components/';
 import {
   DashboardComponent,
@@ -29,7 +30,9 @@ import {
   ProjectListComponent,
   WorkExperienceComponent,
   HobbyListComponent,
+  CompetencyListComponent
 } from './';
+
 
 
 export function HttpLoaderFactory(http: HttpClient) {
@@ -54,6 +57,8 @@ export function HttpLoaderFactory(http: HttpClient) {
     WorkExperienceComponent,
     HobbyListComponent,
     AddHobbyComponent,
+    CompetencyListComponent,
+    AddCompetencyComponent,
   ],
   imports: [
     CommonModule,

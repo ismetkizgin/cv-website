@@ -11,7 +11,8 @@ import {
   UserListComponent,
   ProjectListComponent,
   WorkExperienceComponent,
-  HobbyListComponent
+  HobbyListComponent, 
+  CompetencyListComponent
 } from './pages';
 import { AuthGuard } from './utils/guards';
 
@@ -52,6 +53,11 @@ const routes: Routes = [
         component: HobbyListComponent,
         data: { title: 'Hobby List', icon: 'fa fa-2x fa-home' },
       },
+      {
+        path: 'competencies',
+        component: CompetencyListComponent,
+        data: { title: 'Competency List', icon: 'fa fa-2x fa-home' },
+      }
     ],
   },
   {

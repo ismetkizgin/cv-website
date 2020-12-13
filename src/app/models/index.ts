@@ -3,3 +3,4 @@ export * from './user';
 export * from './project';
 export * from './work-experience';
 export * from './hobby';
+export * from './competency';

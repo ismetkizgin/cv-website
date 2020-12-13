@@ -5,3 +5,4 @@ export * from './user/user.service';
 export * from './project/project.service';
 export * from './work-experience/work-experience.service';
 export * from './hobby/hobby.service';
+export * from './competency/competency.service';
