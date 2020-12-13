@@ -39,21 +39,32 @@ $my-app-theme: mat-light-theme(
 .notification {
   color: white;
 
-  &__error {
+  &error {
     background-color: brown;
   }
 
-  &__error button {
+  &error button {
     color: white;
     background-color: brown;
   }
 
-  &__success {
+  &success {
     background-color: green;
   }
 
-  &__success button {
+  &success button {
     color: white;
     background-color: green;
   }
 }
+
+a[type="button"] {
+  -webkit-appearance: none;
+}
+
+.mat-form-field {
+  width: 100%;
+}
+
+    
+

@@ -15,6 +15,7 @@ import {
   AdminFooterComponent,
   AdminLayoutComponent,
   DialogWindowComponent,
+  PasswordChangeComponent
 } from '../../components/';
 import { DashboardComponent, LoginComponent, UserListComponent } from './';
 
@@ -33,6 +34,7 @@ export function HttpLoaderFactory(http: HttpClient) {
     LoginComponent,
     DialogWindowComponent,
     UserListComponent,
+    PasswordChangeComponent
   ],
   imports: [
     CommonModule,
