@@ -20,8 +20,9 @@ import {
   DialogWindowComponent,
   AddUserComponent,
   AddProjectComponent,
+  AddWorkExperienceComponent, 
+  AddHobbyComponent,
   AddGrammarComponent,
-  AddWorkExperienceComponent
 } from '../../components/';
 import {
   DashboardComponent,
@@ -30,9 +31,11 @@ import {
   UserListComponent,
   ProjectListComponent,
   WorkExperienceComponent,
+  HobbyListComponent,
   GrammarListComponent,
   EventsComponent
 } from './';
+
 
 export function HttpLoaderFactory(http: HttpClient) {
   return new TranslateHttpLoader(http);
@@ -56,6 +59,8 @@ export function HttpLoaderFactory(http: HttpClient) {
     UserListComponent,
     ProjectListComponent,
     WorkExperienceComponent,
+    HobbyListComponent,
+    AddHobbyComponent,
     PersonalInformationComponent,
     GrammarListComponent,
     EventsComponent,

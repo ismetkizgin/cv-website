@@ -1,0 +1,24 @@
+<div ma-dialog-title class="institution-dialog__header">
+    <div class="modal-header">
+        <h2>{{ 'Add Hobby' | translate}}</h2>
+        <a [mat-dialog-close]="false" class="close-icon">
+            <mat-icon>close</mat-icon>
+        </a>
+    </div>
+</div>
+
+<mat-dialog-content class="mat-typography institution-dialog__content">
+    <form #hobbyForm='ngForm' (ngSubmit)="onSave(hobbyForm)">
+        <div class="form-group mt-2">
+            <mat-form-field appearance="outline" class="w-100">
+                <mat-label>{{ 'Hobby Name' | translate }}</mat-label>
+                <input matInput type="text" placeholder="{{ 'Enter Hobby Name' | translate }}"
+                    pattern="^[A-Za-zÇçÖöŞşÜüĞğİı ]+$" name="HobbyName" #HobbyName="ngModel" [(ngModel)]="hobby.HobbyName"
+                    required>
+                <mat-error *ngIf="HobbyName.invalid&&HobbyName.touched">
+                    {{ 'Hobby Name field must be filled' | translate }}</mat-error>
+            </mat-form-field>
+        </div>
+        <button type="submit" class="btn btn-info w-100">{{'Save'| translate}}</button>
+    </form>
+</mat-dialog-content> 

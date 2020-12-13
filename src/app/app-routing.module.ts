@@ -11,6 +11,7 @@ import {
   UserListComponent,
   ProjectListComponent,
   WorkExperienceComponent,
+  HobbyListComponent,
   PersonalInformationComponent,
   GrammarListComponent,
   EventsComponent
@@ -48,6 +49,11 @@ const routes: Routes = [
         path: 'works',
         component: WorkExperienceComponent,
         data: { title: 'Work Experience List', icon: 'fa fa-2x fa-home' },
+      },
+      {
+        path: 'hobbies',
+        component: HobbyListComponent,
+        data: { title: 'Hobby List', icon: 'fa fa-2x fa-home' },
       },
       {
         path: 'personal',
