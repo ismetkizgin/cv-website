@@ -11,7 +11,8 @@ import {
   UserListComponent,
   ProjectListComponent,
   WorkExperienceComponent,
-  PersonalInformationComponent
+  PersonalInformationComponent,
+  GrammarListComponent
 } from './pages';
 import { AuthGuard } from './utils/guards';
 
@@ -51,6 +52,11 @@ const routes: Routes = [
         path: 'personal',
         component: PersonalInformationComponent,
         data: { title: 'Personal List', icon: 'fa fa-2x fa-home' },
+      },
+      {
+        path: 'grammar',
+        component: GrammarListComponent,
+        data: { title: 'Grammar List', icon: 'fa fa-2x fa-home' },
       },
     ],
   },

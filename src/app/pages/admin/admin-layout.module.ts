@@ -28,7 +28,8 @@ import {
   LoginComponent,
   UserListComponent,
   ProjectListComponent,
-  WorkExperienceComponent
+  WorkExperienceComponent,
+  GrammarListComponent
 } from './';
 
 export function HttpLoaderFactory(http: HttpClient) {
@@ -53,6 +54,7 @@ export function HttpLoaderFactory(http: HttpClient) {
     ProjectListComponent,
     WorkExperienceComponent,
     PersonalInformationComponent,
+    GrammarListComponent,
   ],
   imports: [
     CommonModule,

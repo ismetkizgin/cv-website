@@ -1,0 +1,54 @@
+<div class="row">
+    <div class="col-md-4 col-sm-12 add-button">
+        <button type="button" class="btn btn-sm btn-outline-success"><i class="fas fa-plus"></i> {{ 'Add Project' | translate }}</button>
+    </div>
+    <div class="col-md-3 col-sm-12 ml-auto">
+        <mat-form-field>
+            <mat-label>{{ 'Search' | translate }}</mat-label>
+            <input matInput type="text" [(ngModel)]="searchText"
+                placeholder="{{ 'Enter Words for Search' | translate }}" name="SearchText">
+            <a type="button" matSuffix [attr.aria-label]="'Search'">
+                <mat-icon>search</mat-icon>
+            </a>
+        </mat-form-field>
+    </div>
+</div>
+<div class="card">
+    <div class="card-body table-responsive p-0">
+        <table class="table table-hover table-striped">
+            <thead>
+                <tr>
+                    <th>{{ 'Grammar No' | translate }}</th>
+                    <th>{{ 'Language Name' | translate }}</th>
+                    <th>{{ 'Reading Level' | translate }}</th>
+                    <th>{{ 'Speaking Level' | translate }}</th>
+                    <th>{{ 'Writing Level' | translate }}</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr *ngFor="let grammar of grammars | filter:searchText">
+                    <td> {{ grammar.Id }} </td>
+                    <td> {{ grammar.LanguageName }}</td>
+                    <td> {{ grammar.ReadingLevel }}</td>
+                    <td> {{ grammar.SpeakingLevel }}</td>
+                    <td> {{ grammar.WritingLevel }}</td>
+                    <td class="list-button text-right">
+                        <a mat-icon-button [matMenuTriggerFor]="menu">
+                            <mat-icon class="list-menu">more_vert</mat-icon>
+                        </a>
+                        <mat-menu #menu="matMenu">
+                            <a mat-menu-item>
+                                <mat-icon>edit</mat-icon>
+                                <span>{{ 'Edit' | translate }}</span>
+                            </a>
+                            <a mat-menu-item>
+                                <mat-icon>delete</mat-icon>
+                                <span>{{ 'Delete' | translate }}</span>
+                            </a>
+                        </mat-menu>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</div>
