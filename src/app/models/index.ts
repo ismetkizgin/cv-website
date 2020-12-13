@@ -6,4 +6,5 @@ export * from './member-ships';
 export * from './hobby';
 export * from './personal';
 export * from './grammar';
+export * from './documentation';
 export * from './event';

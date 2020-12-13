@@ -8,4 +8,5 @@ export * from './member-ships/member-ships.service';
 export * from './hobby/hobby.service';
 export * from './personal-information/personal-information.service';
 export * from './grammar/grammar.service';
+export * from './documentation/documentation.service';
 export * from './event/event.service';

@@ -21,6 +21,7 @@ import {
   AddUserComponent,
   AddProjectComponent,
   AddWorkExperienceComponent,
+  AddDocumentationComponent,
   AddMemberShipsComponent,
   AddHobbyComponent,
   AddGrammarComponent,
@@ -32,9 +33,10 @@ import {
   UserListComponent,
   ProjectListComponent,
   WorkExperienceComponent,
+  GrammarListComponent,
+  DocumentationListComponent,
   MemberShipsListComponent,
   HobbyListComponent,
-  GrammarListComponent,
   EventsComponent
 } from './';
 
@@ -67,6 +69,8 @@ export function HttpLoaderFactory(http: HttpClient) {
     AddHobbyComponent,
     PersonalInformationComponent,
     GrammarListComponent,
+    DocumentationListComponent,
+    AddDocumentationComponent,
     EventsComponent,
   ],
   imports: [
