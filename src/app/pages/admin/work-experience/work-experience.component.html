@@ -1,0 +1,54 @@
+<div class="row">
+    <div class="col-md-4 col-sm-12 add-button">
+        <button type="button" class="btn btn-sm btn-outline-success"><i class="fas fa-plus"></i> {{ 'Add Work Experience' | translate }}</button>
+    </div>
+    <div class="col-md-3 col-sm-12 ml-auto">
+        <mat-form-field>
+            <mat-label>{{ 'Search' | translate }}</mat-label>
+            <input matInput type="text" [(ngModel)]="searchText"
+                placeholder="{{ 'Enter Words for Search' | translate }}" name="SearchText">
+            <a type="button" matSuffix [attr.aria-label]="'Search'">
+                <mat-icon>search</mat-icon>
+            </a>
+        </mat-form-field>
+    </div>
+</div>
+<div class="card">
+    <div class="card-body table-responsive p-0">
+        <table class="table table-hover table-striped">
+            <thead>
+                <tr>
+                    <td>{{ 'Number' | translate }}</td>
+                    <td> {{ 'Company Name' |translate }}</td>
+                    <td> {{ 'Title' | translate }}</td>
+                    <td> {{ 'Start Date Of Work' | translate }}</td>
+                    <td> {{ 'Dismissal Date' | translate }}</td>
+                </tr>
+            </thead>
+            <tbody>
+                <tr *ngFor="let work of works | filter:searchText">
+                    <td> {{ work.Id }} </td>
+                    <td> {{ work.CompanyName }}</td>
+                    <td> {{ work.Title }}</td>
+                    <td> {{ work.StartDateOfWork | date:'M/dd/yyyy' }}</td>
+                    <td> {{ work.DismissalDate | date:'M/dd/yyyy' }}</td>
+                    <td class="list-button text-right">
+                        <a mat-icon-button [matMenuTriggerFor]="menu">
+                            <mat-icon class="list-menu">more_vert</mat-icon>
+                        </a>
+                        <mat-menu #menu="matMenu">
+                            <a mat-menu-item>
+                                <mat-icon>edit</mat-icon>
+                                <span>{{ 'Edit' | translate }}</span>
+                            </a>
+                            <a mat-menu-item (click)="workExperienceDelete(work.Id)">
+                                <mat-icon>delete</mat-icon>
+                                <span>{{ 'Delete' | translate }}</span>
+                            </a>
+                        </mat-menu>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</div>

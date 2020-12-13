@@ -18,8 +18,13 @@ import {
   AddUserComponent,
   AddProjectComponent
 } from '../../components/';
-import { DashboardComponent, LoginComponent, UserListComponent } from './';
-import { ProjectListComponent } from './project-list/project-list.component';
+import { 
+  DashboardComponent, 
+  LoginComponent, 
+  UserListComponent, 
+  ProjectListComponent,
+  WorkExperienceComponent
+ } from './';
 
 export function HttpLoaderFactory(http: HttpClient) {
   return new TranslateHttpLoader(http);
@@ -39,6 +44,7 @@ export function HttpLoaderFactory(http: HttpClient) {
     DialogWindowComponent,
     UserListComponent,
     ProjectListComponent,
+    WorkExperienceComponent,
   ],
   imports: [
     CommonModule,
