@@ -7,7 +7,6 @@ export * from './add-reference/add-reference.component';
 export * from './add-work-experience/add-work-experience.component';
 export * from './add-member-ships/add-member-ships.component';
 export * from './add-hobby/add-hobby.component';
-export * from './update-personal/update-personal.component';
 export * from './add-documentation/add-documentation.component';
 export * from './add-grammar/add-grammar.component';
 export * from './add-event/add-event.component';

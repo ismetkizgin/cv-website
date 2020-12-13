@@ -13,7 +13,6 @@ import { MatModule } from '../../utils';
 import {
   AdminSidebarComponent,
   AdminControlSidebarComponent,
-  UpdatePersonalComponent,
   AdminHeaderComponent,
   AdminFooterComponent,
   AdminLayoutComponent,
@@ -30,7 +29,6 @@ import {
 } from '../../components/';
 import {
   DashboardComponent,
-  PersonalInformationComponent,
   LoginComponent,
   UserListComponent,
   ProjectListComponent,
@@ -40,10 +38,9 @@ import {
   DocumentationListComponent,
   MemberShipsListComponent,
   HobbyListComponent,
-  EventsComponent
+  EventsComponent,
+  UpdateViewPersonelComponent
 } from './';
-
-
 
 export function HttpLoaderFactory(http: HttpClient) {
   return new TranslateHttpLoader(http);
@@ -60,7 +57,6 @@ export function HttpLoaderFactory(http: HttpClient) {
     AddGrammarComponent,
     AddProjectComponent,
     LoginComponent,
-    UpdatePersonalComponent,
     AddUserComponent,
     AddEventComponent,
     AddWorkExperienceComponent,
@@ -74,11 +70,11 @@ export function HttpLoaderFactory(http: HttpClient) {
     AddMemberShipsComponent,
     HobbyListComponent,
     AddHobbyComponent,
-    PersonalInformationComponent,
     GrammarListComponent,
     DocumentationListComponent,
     AddDocumentationComponent,
     EventsComponent,
+    UpdateViewPersonelComponent,
   ],
   imports: [
     CommonModule,

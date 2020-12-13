@@ -6,7 +6,7 @@ export * from './work-experience/work-experience.component';
 export * from './reference-list/reference-list.component';
 export * from './member-ships-list/member-ships-list.component';
 export * from './hobby-list/hobby-list.component';
-export * from './personal-information/personal-information.component';
 export * from './grammar-list/grammar-list.component';
 export * from './documentation-list/documentation-list.component';
 export * from './events/events.component';
+export * from './update-view-personal/update-view-personel/update-view-personel.component'

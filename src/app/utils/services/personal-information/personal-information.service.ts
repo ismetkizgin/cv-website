@@ -40,7 +40,7 @@ export class PersonalInformationService {
     switch (error.status) {
       case 400:
         this._translateService
-          .get('User password does not match !')
+          .get('Personal information does not match !')
           .subscribe((value) => (errorMessage = value));
         break;
       case 401:
@@ -50,17 +50,17 @@ export class PersonalInformationService {
         break;
       case 409:
         this._translateService
-          .get('Such an user is already registered in the system !')
+          .get('Such an personal information is already registered in the system !')
           .subscribe((value) => (errorMessage = value));
         break;
       case 417:
         this._translateService
-          .get('Please enter correct user information !')
+          .get('Please enter correct personel information !')
           .subscribe((value) => (errorMessage = value));
         break;
       case 404:
         this._translateService
-          .get('No user record found in the system !')
+          .get('No personel information record found in the system !')
           .subscribe((value) => (errorMessage = value));
         break;
       default:

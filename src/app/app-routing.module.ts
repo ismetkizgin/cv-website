@@ -4,20 +4,20 @@ import {
   ClientLayoutComponent,
   AdminLayoutComponent,
 } from './components/layouts';
-import { 
-  HomepageComponent, 
-  DashboardComponent, 
-  LoginComponent, 
+import {
+  HomepageComponent,
+  DashboardComponent,
+  LoginComponent,
   UserListComponent,
   ProjectListComponent,
   WorkExperienceComponent,
   ReferenceListComponent,
   MemberShipsListComponent,
   HobbyListComponent,
-  PersonalInformationComponent,
   GrammarListComponent,
   DocumentationListComponent,
-  EventsComponent
+  EventsComponent,
+  UpdateViewPersonelComponent
 } from './pages';
 import { AuthGuard } from './utils/guards';
 
@@ -65,8 +65,8 @@ const routes: Routes = [
       },
       {
         path: 'personal',
-        component: PersonalInformationComponent,
-        data: { title: 'Personal List', icon: 'fa fa-2x fa-home' },
+        component: UpdateViewPersonelComponent,
+        data: { title: 'Personel Update And View', icon: 'fa fa-2x fa-home' },
       },
       {
         path: 'grammar',
@@ -101,5 +101,5 @@ const routes: Routes = [
   imports: [RouterModule.forRoot(routes)],
   exports: [RouterModule],
 })
-export class AppRoutingModule {}
+export class AppRoutingModule { }
 export const routingComponents = [];
