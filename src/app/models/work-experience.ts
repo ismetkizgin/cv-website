@@ -1,6 +1,6 @@
 export class WorkExperience{
     CompanyName:string;
-    DismisalDate:string;
+    DismissalDate:string;
     StartDateOfWork:string;
     Title:string;
     Id:number;

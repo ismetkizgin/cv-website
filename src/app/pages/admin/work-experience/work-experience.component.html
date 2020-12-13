@@ -1,6 +1,6 @@
 <div class="row">
     <div class="col-md-4 col-sm-12 add-button">
-        <button type="button" class="btn btn-sm btn-outline-success"><i class="fas fa-plus"></i> {{ 'Add Work Experience' | translate }}</button>
+        <button type="button" (click)="openAddWorkExperienceModal()" class="btn btn-sm btn-outline-success"><i class="fas fa-plus"></i> {{ 'Add Work Experience' | translate }}</button>
     </div>
     <div class="col-md-3 col-sm-12 ml-auto">
         <mat-form-field>
@@ -37,7 +37,7 @@
                             <mat-icon class="list-menu">more_vert</mat-icon>
                         </a>
                         <mat-menu #menu="matMenu">
-                            <a mat-menu-item>
+                            <a mat-menu-item (click)="openAddWorkExperienceModal(work.Id)">
                                 <mat-icon>edit</mat-icon>
                                 <span>{{ 'Edit' | translate }}</span>
                             </a>

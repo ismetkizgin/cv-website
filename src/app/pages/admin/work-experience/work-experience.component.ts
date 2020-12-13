@@ -3,7 +3,7 @@ import { WorkExperienceService } from '../../../utils/services';
 import { TranslateService } from '@ngx-translate/core';
 import { MatDialog } from '@angular/material/dialog';
 import { MatSnackBar } from '@angular/material/snack-bar';
-import { DialogWindowComponent } from 'src/app/components';
+import { AddWorkExperienceComponent, DialogWindowComponent } from 'src/app/components';
 import { WorkExperience } from 'src/app/models';
 
 @Component({
@@ -29,6 +29,18 @@ export class WorkExperienceComponent implements OnInit {
     } catch (error) {
       this._workExperienceService.errorNotification(error);
     }
+  }
+
+  openAddWorkExperienceModal(Id=null){
+    const diologRef = this._dialog.open(AddWorkExperienceComponent,{
+      width:"500px",
+      data: this.works.find(
+        (work) => work.Id == Id
+      ),
+    });
+    diologRef.afterClosed().subscribe((result: any) => {
+      if (result) this.ngOnInit();
+    });
   }
 
   async workExperienceDelete(Id) {

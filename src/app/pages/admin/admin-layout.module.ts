@@ -6,27 +6,42 @@ import { FormsModule } from '@angular/forms';
 import { HttpClient } from '@angular/common/http';
 import { TranslateHttpLoader } from '@ngx-translate/http-loader';
 import { NgSearchFilterModule } from 'ng-search-filter';
+import { MatDatepickerModule } from '@angular/material/datepicker';
+import { MatNativeDateModule } from '@angular/material/core';
 import { NgxPaginationModule } from 'ngx-pagination';
 import { MatModule } from '../../utils';
 import {
   AdminSidebarComponent,
   AdminControlSidebarComponent,
+  UpdatePersonalComponent,
   AdminHeaderComponent,
   AdminFooterComponent,
   AdminLayoutComponent,
   DialogWindowComponent,
   AddUserComponent,
   AddProjectComponent,
-  AddReferenceComponent
+  AddReferenceComponent,
+  AddWorkExperienceComponent,
+  AddDocumentationComponent,
+  AddMemberShipsComponent,
+  AddHobbyComponent,
+  AddGrammarComponent,
 } from '../../components/';
-import { 
-  DashboardComponent, 
-  LoginComponent, 
-  UserListComponent, 
+import {
+  DashboardComponent,
+  PersonalInformationComponent,
+  LoginComponent,
+  UserListComponent,
   ProjectListComponent,
   WorkExperienceComponent,
-  ReferenceListComponent
- } from './';
+  ReferenceListComponent,
+  GrammarListComponent,
+  DocumentationListComponent,
+  MemberShipsListComponent,
+  HobbyListComponent,
+  EventsComponent
+} from './';
+
 
 
 export function HttpLoaderFactory(http: HttpClient) {
@@ -41,21 +56,35 @@ export function HttpLoaderFactory(http: HttpClient) {
     AdminHeaderComponent,
     AdminControlSidebarComponent,
     AdminSidebarComponent,
+    AddGrammarComponent,
     AddProjectComponent,
     LoginComponent,
+    UpdatePersonalComponent,
     AddUserComponent,
+    AddWorkExperienceComponent,
     DialogWindowComponent,
     UserListComponent,
     ProjectListComponent,
     WorkExperienceComponent,
     ReferenceListComponent,
-    AddReferenceComponent
+    AddReferenceComponent,
+    MemberShipsListComponent,
+    AddMemberShipsComponent,
+    HobbyListComponent,
+    AddHobbyComponent,
+    PersonalInformationComponent,
+    GrammarListComponent,
+    DocumentationListComponent,
+    AddDocumentationComponent,
+    EventsComponent,
   ],
   imports: [
     CommonModule,
     MatModule,
     NgSearchFilterModule,
     NgxPaginationModule,
+    MatNativeDateModule,
+    MatDatepickerModule,
     RouterModule,
     FormsModule,
     TranslateModule.forRoot({
