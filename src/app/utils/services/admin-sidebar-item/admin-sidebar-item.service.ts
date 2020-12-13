@@ -20,6 +20,51 @@ export class AdminSidebarItemService {
       icon: 'fa fa-address-book',
       link: '/admin/users',
     },
+    {
+      title: 'Project List',
+      icon: 'fa fa-address-book',
+      link: '/admin/projects',
+    },
+    {
+      title: 'Work Experience List',
+      icon: 'fa fa-address-book',
+      link: '/admin/works',
+    },
+    {
+      title: 'Member Ships List',
+      icon: 'fa fa-address-book',
+      link: '/admin/member-ships',
+    },
+    {
+      title: 'Hobby List',
+      icon: 'fa fa-address-book',
+      link: '/admin/hobbies',
+    },
+    {
+      title: 'Personal List',
+      icon: 'fa fa-address-book',
+      link: '/admin/personal',
+    },
+    {
+      title: 'Grammer List',
+      icon: 'fa fa-address-book',
+      link: '/admin/grammer',
+    },
+    {
+      title: 'Documantation List',
+      icon: 'fa fa-address-book',
+      link: '/admin/documantation',
+    },
+    {
+      title: 'Event List',
+      icon: 'fa fa-address-book',
+      link: '/admin/event',
+    },
+    {
+      title: 'Referance List',
+      icon: 'fa fa-address-book',
+      link: '/admin/referances',
+    },
   ];
 
   getChildUrlActiveState(path: string[]) {
