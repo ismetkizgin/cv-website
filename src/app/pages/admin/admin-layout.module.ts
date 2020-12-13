@@ -20,6 +20,7 @@ import {
   DialogWindowComponent,
   AddUserComponent,
   AddProjectComponent,
+  AddGrammarComponent,
   AddWorkExperienceComponent
 } from '../../components/';
 import {
@@ -44,6 +45,7 @@ export function HttpLoaderFactory(http: HttpClient) {
     AdminHeaderComponent,
     AdminControlSidebarComponent,
     AdminSidebarComponent,
+    AddGrammarComponent,
     AddProjectComponent,
     LoginComponent,
     UpdatePersonalComponent,

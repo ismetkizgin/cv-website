@@ -1,0 +1,51 @@
+<div ma-dialog-title class="institution-dialog__header">
+    <div class="modal-header">
+        <h2>{{ 'Add Project' | translate}}</h2>
+        <a [mat-dialog-close]="false" class="close-icon">
+            <mat-icon>close</mat-icon>
+        </a>
+    </div>
+</div>
+
+<mat-dialog-content class="mat-typography institution-dialog__content">
+    <form #grammarForm='ngForm' (ngSubmit)="onSave(grammarForm)">
+        <div class="form-group mt-2">
+            <mat-form-field appearance="outline" class="w-100">
+                <mat-label>{{ 'Language Name' | translate }}</mat-label>
+                <input matInput type="text" placeholder="{{ 'Enter Language Name' | translate }}"
+                    pattern="^[A-Za-zÇçÖöŞşÜüĞğİı ]+$" name="LanguageName" #LanguageName="ngModel"
+                    [(ngModel)]="grammar.LanguageName" required>
+                <mat-error *ngIf="LanguageName.invalid&&LanguageName.touched">
+                    {{ 'Language Name field must be filled' | translate }}</mat-error>
+            </mat-form-field>
+        </div>
+        <div class="form-group">
+            <mat-form-field appearance="outline" class="w-100">
+                <mat-label>{{ 'Reading Level' | translate }}</mat-label>
+                <input matInput type="text" placeholder="{{ 'Enter Reading Level' | translate }}" name="ReadingLevel"
+                    #ReadingLevel="ngModel" [(ngModel)]="grammar.ReadingLevel" required>
+                <mat-error *ngIf="ReadingLevel.invalid&&ReadingLevel.touched">
+                    {{ 'Description field must be filled' | translate }}</mat-error>
+            </mat-form-field>
+        </div>
+        <div class="form-group">
+            <mat-form-field appearance="outline" class="w-100">
+                <mat-label>{{ 'Speaking Level' | translate }}</mat-label>
+                <input matInput type="text" placeholder="{{ 'Enter Speaking Level' | translate }}" name="SpeakingLevel"
+                    #SpeakingLevel="ngModel" [(ngModel)]="grammar.SpeakingLevel" required>
+                <mat-error *ngIf="SpeakingLevel.invalid&&SpeakingLevel.touched">
+                    {{ 'Speaking Level field must be filled' | translate }}</mat-error>
+            </mat-form-field>
+        </div>
+        <div class="form-group">
+            <mat-form-field appearance="outline" class="w-100">
+                <mat-label>{{ 'Writing Level' | translate }}</mat-label>
+                <input matInput type="text" placeholder="{{ 'Enter Writing Level' | translate }}" name="WritingLevel"
+                    #WritingLevel="ngModel" [(ngModel)]="grammar.WritingLevel" required>
+                <mat-error *ngIf="WritingLevel.invalid&&WritingLevel.touched">
+                    {{ 'Writing Level field must be filled' | translate }}</mat-error>
+            </mat-form-field>
+        </div>
+        <button type="submit" class="btn btn-info w-100">{{'Save'| translate}}</button>
+    </form>
+</mat-dialog-content>
