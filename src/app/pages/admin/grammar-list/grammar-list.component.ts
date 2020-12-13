@@ -13,7 +13,7 @@ export class GrammarListComponent implements OnInit {
     private _grammarService:GrammarService,
   ) { }
 
-  searcText = "";
+  searchText = "";
   grammars: Array<Grammar>;
 
   async ngOnInit() {

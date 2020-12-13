@@ -20,7 +20,9 @@ import {
   DialogWindowComponent,
   AddUserComponent,
   AddProjectComponent,
-  AddWorkExperienceComponent
+  AddWorkExperienceComponent,
+  AddDocumentationComponent,
+  
 } from '../../components/';
 import {
   DashboardComponent,
@@ -29,7 +31,8 @@ import {
   UserListComponent,
   ProjectListComponent,
   WorkExperienceComponent,
-  GrammarListComponent
+  GrammarListComponent,
+  DocumentationListComponent
 } from './';
 
 export function HttpLoaderFactory(http: HttpClient) {
@@ -55,6 +58,8 @@ export function HttpLoaderFactory(http: HttpClient) {
     WorkExperienceComponent,
     PersonalInformationComponent,
     GrammarListComponent,
+    DocumentationListComponent,
+    AddDocumentationComponent
   ],
   imports: [
     CommonModule,
