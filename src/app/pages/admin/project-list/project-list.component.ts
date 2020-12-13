@@ -1,9 +1,8 @@
 import { Component, OnInit } from '@angular/core';
-import { UserService } from '../../../utils/services';
 import { TranslateService } from '@ngx-translate/core';
 import { MatDialog } from '@angular/material/dialog';
 import { MatSnackBar } from '@angular/material/snack-bar';
-import { DialogWindowComponent } from 'src/app/components';
+import { AddProjectComponent, DialogWindowComponent } from 'src/app/components';
 import { Project } from 'src/app/models';
 import { ProjectService } from '../../../utils/services';
 
@@ -37,8 +36,8 @@ export class ProjectListComponent implements OnInit {
     }
   }
 
-  /*openAddProjectModal(Id = null) {
-    const diologRef = this._dialog.open(AddUserComponent, {
+  openAddProjectModal(Id = null) {
+    const diologRef = this._dialog.open(AddProjectComponent, {
       width: '500px',
       data: this.projects.find(
         (project) => project.Id == Id
@@ -47,7 +46,7 @@ export class ProjectListComponent implements OnInit {
     diologRef.afterClosed().subscribe((result: any) => {
       if (result) this.ngOnInit();
     });
-  }*/
+  }
 
   async projectDelete(Id) {
     const diologRef = this._dialog.open(DialogWindowComponent, {

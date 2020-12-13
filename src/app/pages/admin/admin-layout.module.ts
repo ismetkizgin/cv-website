@@ -15,7 +15,8 @@ import {
   AdminFooterComponent,
   AdminLayoutComponent,
   DialogWindowComponent,
-  AddUserComponent
+  AddUserComponent,
+  AddProjectComponent
 } from '../../components/';
 import { DashboardComponent, LoginComponent, UserListComponent } from './';
 import { ProjectListComponent } from './project-list/project-list.component';
@@ -32,6 +33,7 @@ export function HttpLoaderFactory(http: HttpClient) {
     AdminHeaderComponent,
     AdminControlSidebarComponent,
     AdminSidebarComponent,
+    AddProjectComponent,
     LoginComponent,
     AddUserComponent,
     DialogWindowComponent,
