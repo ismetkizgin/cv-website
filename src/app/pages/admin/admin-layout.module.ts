@@ -23,6 +23,7 @@ import {
   AddWorkExperienceComponent, 
   AddHobbyComponent,
   AddGrammarComponent,
+  AddEducationInformationComponent,
 } from '../../components/';
 import {
   DashboardComponent,
@@ -66,6 +67,7 @@ export function HttpLoaderFactory(http: HttpClient) {
     GrammarListComponent,
     EventsComponent,
     EducationInformationComponent,
+    AddEducationInformationComponent,
   ],
   imports: [
     CommonModule,

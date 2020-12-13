@@ -1,6 +1,6 @@
 export class EducationInformation{
     Id: number;
-    SchoolNmae: string;
+    SchoolName: string;
     SchoolStatus: string;
     SectionName: string;
     EntryDate: Date;
