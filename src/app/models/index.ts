@@ -6,3 +6,4 @@ export * from './hobby';
 export * from './personal';
 export * from './grammar';
 export * from './event';
+export * from './educationInformation';

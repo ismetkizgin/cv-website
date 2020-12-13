@@ -14,7 +14,8 @@ import {
   HobbyListComponent,
   PersonalInformationComponent,
   GrammarListComponent,
-  EventsComponent
+  EventsComponent,
+  EducationInformationComponent
 } from './pages';
 import { AuthGuard } from './utils/guards';
 
@@ -69,6 +70,11 @@ const routes: Routes = [
         path: 'event',
         component: EventsComponent,
         data: { title: 'Event List', icon: 'fa fa-2x fa-home' },
+      },
+      {
+        path: 'education-info',
+        component: EducationInformationComponent,
+        data: { title: 'Education Information List', icon: 'fa fa-2x fa-home' },
       },
     ],
   },

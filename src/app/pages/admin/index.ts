@@ -7,3 +7,4 @@ export * from './hobby-list/hobby-list.component';
 export * from './personal-information/personal-information.component';
 export * from './grammar-list/grammar-list.component';
 export * from './events/events.component';
+export * from './education-information/education-information.component';
