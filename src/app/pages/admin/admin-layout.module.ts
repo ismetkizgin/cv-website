@@ -18,6 +18,7 @@ import {
   AddUserComponent
 } from '../../components/';
 import { DashboardComponent, LoginComponent, UserListComponent } from './';
+import { ProjectListComponent } from './project-list/project-list.component';
 
 export function HttpLoaderFactory(http: HttpClient) {
   return new TranslateHttpLoader(http);
@@ -35,6 +36,7 @@ export function HttpLoaderFactory(http: HttpClient) {
     AddUserComponent,
     DialogWindowComponent,
     UserListComponent,
+    ProjectListComponent,
   ],
   imports: [
     CommonModule,

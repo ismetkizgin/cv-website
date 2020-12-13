@@ -8,7 +8,8 @@ import {
   HomepageComponent, 
   DashboardComponent, 
   LoginComponent, 
-  UserListComponent
+  UserListComponent,
+  ProjectListComponent
 } from './pages';
 import { AuthGuard } from './utils/guards';
 
@@ -33,6 +34,11 @@ const routes: Routes = [
         path: 'users',
         component: UserListComponent,
         data: { title: 'User List', icon: 'fa fa-2x fa-home' },
+      },
+      {
+        path: 'projects',
+        component: ProjectListComponent,
+        data: { title: 'Project List', icon: 'fa fa-2x fa-home' },
       },
     ],
   },
