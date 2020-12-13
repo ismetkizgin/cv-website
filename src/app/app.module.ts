@@ -19,7 +19,7 @@ export function HttpLoaderFactory(http: HttpClient) {
   declarations: [
     AppComponent,
     routingComponents,
-   
+ 
   ],
   imports: [
     BrowserModule,

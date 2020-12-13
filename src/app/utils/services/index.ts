@@ -11,3 +11,4 @@ export * from './personal-information/personal-information.service';
 export * from './grammar/grammar.service';
 export * from './documentation/documentation.service';
 export * from './event/event.service';
+export * from './activities-attended/activities-attended.service';

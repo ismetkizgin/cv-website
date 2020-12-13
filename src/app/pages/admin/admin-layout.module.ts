@@ -26,6 +26,7 @@ import {
   AddMemberShipsComponent,
   AddHobbyComponent,
   AddGrammarComponent,
+  AddActivitiesAttendedComponent
 } from '../../components/';
 import {
   DashboardComponent,
@@ -39,7 +40,8 @@ import {
   DocumentationListComponent,
   MemberShipsListComponent,
   HobbyListComponent,
-  EventsComponent
+  EventsComponent,
+  ActivitiesAttendedListComponent
 } from './';
 
 
@@ -77,6 +79,9 @@ export function HttpLoaderFactory(http: HttpClient) {
     DocumentationListComponent,
     AddDocumentationComponent,
     EventsComponent,
+    AddActivitiesAttendedComponent,
+    ActivitiesAttendedListComponent,
+   
   ],
   imports: [
     CommonModule,

@@ -10,3 +10,4 @@ export * from './personal-information/personal-information.component';
 export * from './grammar-list/grammar-list.component';
 export * from './documentation-list/documentation-list.component';
 export * from './events/events.component';
+export * from './activities-attended-list/activities-attended-list.component';

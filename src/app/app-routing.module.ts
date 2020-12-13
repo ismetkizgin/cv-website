@@ -17,7 +17,8 @@ import {
   PersonalInformationComponent,
   GrammarListComponent,
   DocumentationListComponent,
-  EventsComponent
+  EventsComponent,
+  ActivitiesAttendedListComponent
 } from './pages';
 import { AuthGuard } from './utils/guards';
 
@@ -87,6 +88,11 @@ const routes: Routes = [
         path: 'references',
         component: ReferenceListComponent,
         data: { title: 'Reference List', icon: 'fa fa-2x fa-home' },
+      },
+      {
+        path: 'activities-attended',
+        component: ActivitiesAttendedListComponent,
+        data: { title: 'Activities Attended List', icon: 'fa fa-2x fa-home' },
       },
     ],
   },

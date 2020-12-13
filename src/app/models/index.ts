@@ -9,3 +9,4 @@ export * from './personal';
 export * from './grammar';
 export * from './documentation';
 export * from './event';
+export * from './activities-attended';
