@@ -1,6 +1,6 @@
 <div class="row">
     <div class="col-md-4 col-sm-12 add-button">
-        <button type="button" (click)="openAddGrammarModal()" class="btn btn-sm btn-outline-success"><i class="fas fa-plus"></i> {{ 'Add Grammar' | translate }}</button>
+        <button type="button"  class="btn btn-sm btn-outline-success"><i class="fas fa-plus"></i> {{ 'Add Project' | translate }}</button>
     </div>
     <div class="col-md-3 col-sm-12 ml-auto">
         <mat-form-field>
@@ -18,30 +18,26 @@
         <table class="table table-hover table-striped">
             <thead>
                 <tr>
-                    <th>{{ 'Grammar No' | translate }}</th>
-                    <th>{{ 'Language Name' | translate }}</th>
-                    <th>{{ 'Reading Level' | translate }}</th>
-                    <th>{{ 'Speaking Level' | translate }}</th>
-                    <th>{{ 'Writing Level' | translate }}</th>
+                    <th>{{ 'Event No' | translate }}</th>
+                    <th>{{ 'Event Name' | translate }}</th>
+                    <th>{{ 'Event Status' | translate }}</th>
                 </tr>
             </thead>
             <tbody>
-                <tr *ngFor="let grammar of grammars | filter:searchText">
-                    <td> {{ grammar.Id }} </td>
-                    <td> {{ grammar.LanguageName }}</td>
-                    <td> {{ grammar.ReadingLevel }}</td>
-                    <td> {{ grammar.SpeakingLevel }}</td>
-                    <td> {{ grammar.WritingLevel }}</td>
+                <tr *ngFor="let event of events | filter:searchText">
+                    <td> {{ event.Id }} </td>
+                    <td> {{ event.EventName }}</td>
+                    <td> {{ event.EventStatus }}</td>
                     <td class="list-button text-right">
                         <a mat-icon-button [matMenuTriggerFor]="menu">
                             <mat-icon class="list-menu">more_vert</mat-icon>
                         </a>
                         <mat-menu #menu="matMenu">
-                            <a mat-menu-item (click)="openAddGrammarModal(grammar.Id)">
+                            <a mat-menu>
                                 <mat-icon>edit</mat-icon>
                                 <span>{{ 'Edit' | translate }}</span>
                             </a>
-                            <a mat-menu-item (click)="grammarDelete(grammar.Id)">
+                            <a mat-menu>
                                 <mat-icon>delete</mat-icon>
                                 <span>{{ 'Delete' | translate }}</span>
                             </a>

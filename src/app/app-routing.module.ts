@@ -11,9 +11,12 @@ import {
   UserListComponent,
   ProjectListComponent,
   WorkExperienceComponent,
+  MemberShipsListComponent,
+  HobbyListComponent,
   PersonalInformationComponent,
   GrammarListComponent,
-  DocumentationListComponent
+  DocumentationListComponent,
+  EventsComponent
 } from './pages';
 import { AuthGuard } from './utils/guards';
 
@@ -50,6 +53,16 @@ const routes: Routes = [
         data: { title: 'Work Experience List', icon: 'fa fa-2x fa-home' },
       },
       {
+        path: 'member-ships',
+        component: MemberShipsListComponent,
+        data: { title: 'Member Ships List', icon: 'fa fa-2x fa-home' },
+      },
+      {
+        path: 'hobbies',
+        component: HobbyListComponent,
+        data: { title: 'Hobby List', icon: 'fa fa-2x fa-home' },
+      },
+      {
         path: 'personal',
         component: PersonalInformationComponent,
         data: { title: 'Personal List', icon: 'fa fa-2x fa-home' },
@@ -63,6 +76,11 @@ const routes: Routes = [
         path: 'documentation',
         component: DocumentationListComponent,
         data: { title: 'Documentation List', icon: 'fa fa-2x fa-home' },
+      },
+      {
+        path: 'event',
+        component: EventsComponent,
+        data: { title: 'Event List', icon: 'fa fa-2x fa-home' },
       },
     ],
   },

@@ -22,7 +22,9 @@ import {
   AddProjectComponent,
   AddWorkExperienceComponent,
   AddDocumentationComponent,
-  
+  AddMemberShipsComponent,
+  AddHobbyComponent,
+  AddGrammarComponent,
 } from '../../components/';
 import {
   DashboardComponent,
@@ -32,8 +34,12 @@ import {
   ProjectListComponent,
   WorkExperienceComponent,
   GrammarListComponent,
-  DocumentationListComponent
+  DocumentationListComponent,
+  MemberShipsListComponent,
+  HobbyListComponent,
+  EventsComponent
 } from './';
+
 
 export function HttpLoaderFactory(http: HttpClient) {
   return new TranslateHttpLoader(http);
@@ -47,6 +53,7 @@ export function HttpLoaderFactory(http: HttpClient) {
     AdminHeaderComponent,
     AdminControlSidebarComponent,
     AdminSidebarComponent,
+    AddGrammarComponent,
     AddProjectComponent,
     LoginComponent,
     UpdatePersonalComponent,
@@ -56,10 +63,15 @@ export function HttpLoaderFactory(http: HttpClient) {
     UserListComponent,
     ProjectListComponent,
     WorkExperienceComponent,
+    MemberShipsListComponent,
+    AddMemberShipsComponent,
+    HobbyListComponent,
+    AddHobbyComponent,
     PersonalInformationComponent,
     GrammarListComponent,
     DocumentationListComponent,
-    AddDocumentationComponent
+    AddDocumentationComponent,
+    EventsComponent,
   ],
   imports: [
     CommonModule,
