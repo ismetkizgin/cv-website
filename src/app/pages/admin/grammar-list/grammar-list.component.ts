@@ -53,12 +53,12 @@ export class GrammarListComponent implements OnInit {
         try {
           await this._grammarService.deleteAsync({ Id });
           this.grammars.splice(
-            this.grammars.findIndex((project) => project.Id == Id),
+            this.grammars.findIndex((grammar) => grammar.Id == Id),
             1
           );
           let notificationMessage: string;
           this._translateService
-            .get('User information was successfully deleted')
+            .get('Grammer information was successfully deleted')
             .subscribe((value) => (notificationMessage = value));
 
           this._snackBar.open(notificationMessage, 'X', {
